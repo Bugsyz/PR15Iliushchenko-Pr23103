@@ -1,0 +1,136 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#2C3E3A">
+
+    <ImageView android:id="@+id/iv_menu" android:layout_width="30dp" android:layout_height="30dp" android:layout_marginStart="25dp" android:layout_marginTop="60dp" android:src="@drawable/ic_menu" app:layout_constraintStart_toStartOf="parent" app:layout_constraintTop_toTopOf="parent" app:tint="#FFFFFF"
+        tools:ignore="ContentDescription" />
+    <ImageView android:id="@+id/iv_logo_top" android:layout_width="50dp" android:layout_height="50dp"
+        android:importantForAccessibility="no"
+        android:src="@drawable/logo" app:layout_constraintEnd_toEndOf="parent" app:layout_constraintStart_toStartOf="parent" app:layout_constraintTop_toTopOf="@id/iv_menu" app:tint="#FFFFFF"/>
+    <ImageView android:id="@+id/iv_profile_avatar" android:layout_width="40dp" android:layout_height="40dp" android:layout_marginEnd="25dp" android:scaleType="centerCrop" android:src="@drawable/default_avatar" app:layout_constraintEnd_toEndOf="parent" app:layout_constraintTop_toTopOf="@id/iv_menu"
+        tools:ignore="ContentDescription" />
+
+    <TextView android:id="@+id/tv_welcome_message" android:layout_width="0dp" android:layout_height="wrap_content" android:layout_marginHorizontal="25dp" android:layout_marginTop="20dp" android:fontFamily="@font/alegreya" android:text="С возвращением, Эмили!" android:textColor="#FFFFFF" android:textSize="26sp" android:textStyle="bold" app:layout_constraintEnd_toEndOf="parent" app:layout_constraintStart_toStartOf="parent" app:layout_constraintTop_toBottomOf="@id/iv_logo_top"
+        tools:ignore="HardcodedText" />
+    <TextView android:id="@+id/tv_feeling_question" android:layout_width="0dp" android:layout_height="wrap_content" android:layout_marginHorizontal="25dp" android:layout_marginTop="8dp" android:fontFamily="@font/alegreya" android:text="Каким ты себя ощущаешь сегодня?" android:textColor="#BEC2C2" android:textSize="16sp" app:layout_constraintEnd_toEndOf="parent" app:layout_constraintStart_toStartOf="parent" app:layout_constraintTop_toBottomOf="@id/tv_welcome_message"
+        tools:ignore="HardcodedText" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rv_feelings"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="25dp"
+        android:layout_marginTop="25dp"
+        app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tv_feeling_question"
+        android:orientation="horizontal"/>
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginTop="25dp"
+        app:layout_constraintBottom_toTopOf="@id/bottom_navigation"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/rv_feelings">
+
+        <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="vertical" android:paddingHorizontal="25dp" android:paddingBottom="20dp">
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="20dp"
+                app:cardBackgroundColor="#FFFFFF"
+                app:cardCornerRadius="20dp"
+                app:cardElevation="0dp">
+
+                <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="horizontal" android:padding="20dp" android:gravity="center_vertical">
+                    <LinearLayout android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1" android:orientation="vertical">
+                        <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:fontFamily="@font/alegreya" android:text="Заголовок блока" android:textColor="#2C3E3A" android:textSize="20sp" android:textStyle="bold"
+                            tools:ignore="HardcodedText" />
+                        <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="10dp" android:fontFamily="@font/alegreya" android:text="Краткое описание блока с двумя строчками" android:textColor="#2C3E3A" android:textSize="14sp"
+                            tools:ignore="HardcodedText" />
+
+                        <Button
+                            android:layout_width="wrap_content"
+                            android:layout_height="40dp"
+                            android:layout_marginTop="15dp"
+                            android:background="@drawable/btn_dark_rounded"
+                            android:fontFamily="@font/alegreya"
+                            android:text="подробнее"
+                            android:textAllCaps="false"
+                            android:textColor="#FFFFFF"
+                            android:textSize="14sp"
+                            tools:ignore="DuplicateSpeakableTextCheck,HardcodedText,TouchTargetSizeCheck" />
+                    </LinearLayout>
+                    <ImageView android:layout_width="90dp" android:layout_height="90dp" android:src="@drawable/quote_image_1" android:layout_marginStart="15dp"
+                        tools:ignore="ContentDescription" />
+                </LinearLayout>
+            </androidx.cardview.widget.CardView>
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:cardBackgroundColor="#FFFFFF"
+                app:cardCornerRadius="20dp"
+                app:cardElevation="0dp">
+
+                <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="horizontal" android:padding="20dp" android:gravity="center_vertical">
+                    <LinearLayout android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1" android:orientation="vertical">
+                        <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:fontFamily="@font/alegreya" android:text="Заголовок блока" android:textColor="#2C3E3A" android:textSize="20sp" android:textStyle="bold"
+                            tools:ignore="HardcodedText" />
+                        <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="10dp" android:fontFamily="@font/alegreya" android:text="Краткое описание блока с двумя строчками" android:textColor="#2C3E3A" android:textSize="14sp"
+                            tools:ignore="HardcodedText" />
+
+                        <Button
+                            android:layout_width="wrap_content"
+                            android:layout_height="40dp"
+                            android:layout_marginTop="15dp"
+                            android:background="@drawable/btn_dark_rounded"
+                            android:fontFamily="@font/alegreya"
+                            android:text="подробнее"
+                            android:textAllCaps="false"
+                            android:textColor="#FFFFFF"
+                            android:textSize="14sp"
+                            tools:ignore="HardcodedText,TouchTargetSizeCheck" />
+                    </LinearLayout>
+                    <ImageView android:layout_width="90dp" android:layout_height="90dp" android:src="@drawable/quote_image_2" android:layout_marginStart="15dp"
+                        tools:ignore="ContentDescription" />
+                </LinearLayout>
+            </androidx.cardview.widget.CardView>
+
+        </LinearLayout>
+    </androidx.core.widget.NestedScrollView>
+
+    <LinearLayout android:id="@+id/bottom_navigation" android:layout_width="match_parent" android:layout_height="70dp" android:background="#2C3E3A" android:orientation="horizontal" android:gravity="center" app:layout_constraintBottom_toBottomOf="parent">
+
+        <ImageView
+            android:id="@+id/iv_nav_home"
+            android:layout_width="0dp"
+            android:layout_height="40dp"
+            android:layout_weight="1"
+            android:src="@drawable/ic_home_active"
+            app:tint="#FFFFFF"
+            tools:ignore="ContentDescription" />
+
+        <ImageView android:id="@+id/iv_nav_feelings" android:layout_width="0dp" android:layout_height="40dp" android:layout_weight="1" android:src="@drawable/ic_feelings" app:tint="#7C9A92"
+            tools:ignore="ContentDescription" />
+
+        <ImageView
+            android:id="@+id/iv_nav_profile"
+            android:layout_width="0dp"
+            android:layout_height="40dp"
+            android:layout_weight="1"
+            android:importantForAccessibility="no"
+            android:src="@drawable/ic_profile"
+            app:tint="#7C9A92"
+            tools:ignore="ImageContrastCheck" />
+    </LinearLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:gravity="center"
+    android:layout_marginEnd="15dp">
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/card_feeling"
+        android:layout_width="70dp"
+        android:layout_height="70dp"
+        app:cardBackgroundColor="#FFFFFF"
+        app:cardCornerRadius="20dp"
+        app:cardElevation="0dp">
+
+        <ImageView
+            android:id="@+id/iv_feeling_icon"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_gravity="center"
+            android:src="@drawable/ic_calm"
+            tools:ignore="ContentDescription" />
+    </androidx.cardview.widget.CardView>
+
+    <TextView
+        android:id="@+id/tv_feeling_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:text="Спокойным"
+        android:textColor="#FFFFFF"
+        android:fontFamily="@font/alegreya"
+        android:textSize="12sp"
+        tools:ignore="HardcodedText" />
+</LinearLayout>

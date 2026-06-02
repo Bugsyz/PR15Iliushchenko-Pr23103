@@ -1,0 +1,191 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#2C3E3A">
+
+    <TextView
+        android:id="@+id/tv_listen_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="60dp"
+        android:fontFamily="@font/alegreya"
+        android:text="Прослушивание"
+        android:textColor="#FFFFFF"
+        android:textSize="32sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:ignore="HardcodedText" />
+
+    <ImageView
+        android:id="@+id/iv_meditation_image"
+        android:layout_width="200dp"
+        android:layout_height="200dp"
+        android:layout_marginTop="40dp"
+        android:src="@drawable/logo"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tv_listen_title"
+        app:tint="#8FA89F"
+        tools:ignore="ContentDescription" />
+
+    <TextView
+        android:id="@+id/tv_track_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="30dp"
+        android:fontFamily="@font/alegreya"
+        android:text="Утренняя медитация"
+        android:textColor="#FFFFFF"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/iv_meditation_image"
+        tools:ignore="HardcodedText" />
+
+    <TextView
+        android:id="@+id/tv_track_author"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:fontFamily="@font/alegreya"
+        android:text="MAD Meditation"
+        android:textColor="#BEC2C2"
+        android:textSize="16sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tv_track_name"
+        tools:ignore="HardcodedText" />
+
+    <SeekBar
+        android:id="@+id/seek_bar_progress"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="40dp"
+        android:layout_marginTop="40dp"
+        android:progressTint="#8FA89F"
+        android:thumbTint="#8FA89F"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tv_track_author" />
+
+    <LinearLayout
+        android:id="@+id/ll_time"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="40dp"
+        android:layout_marginTop="10dp"
+        android:orientation="horizontal"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/seek_bar_progress">
+
+        <TextView
+            android:id="@+id/tv_current_time"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:fontFamily="@font/alegreya"
+            android:text="00:00"
+            android:textColor="#BEC2C2"
+            android:textSize="14sp"
+            tools:ignore="HardcodedText" />
+
+        <TextView
+            android:id="@+id/tv_total_time"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:fontFamily="@font/alegreya"
+            android:gravity="end"
+            android:text="10:00"
+            android:textColor="#BEC2C2"
+            android:textSize="14sp"
+            tools:ignore="HardcodedText" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/ll_controls"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="40dp"
+        android:gravity="center"
+        android:orientation="horizontal"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/ll_time">
+
+        <ImageView
+            android:id="@+id/iv_rewind"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:src="@drawable/ic_rewind"
+            app:tint="#FFFFFF"
+            tools:ignore="ContentDescription" />
+
+        <ImageView
+            android:id="@+id/iv_play_pause"
+            android:layout_width="80dp"
+            android:layout_height="80dp"
+            android:layout_marginHorizontal="40dp"
+            android:src="@drawable/ic_play"
+            app:tint="#8FA89F"
+            tools:ignore="ContentDescription" />
+
+        <ImageView
+            android:id="@+id/iv_forward"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:src="@drawable/ic_forward"
+            app:tint="#FFFFFF"
+            tools:ignore="ContentDescription" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/bottom_navigation"
+        android:layout_width="match_parent"
+        android:layout_height="70dp"
+        android:background="#2C3E3A"
+        android:orientation="horizontal"
+        android:gravity="center"
+        app:layout_constraintBottom_toBottomOf="parent">
+
+        <ImageView
+            android:id="@+id/iv_nav_home"
+            android:layout_width="0dp"
+            android:layout_height="45dp"
+            android:layout_weight="1"
+            android:src="@drawable/ic_home_active"
+            android:padding="10dp"
+            app:tint="#7C9A92"
+            tools:ignore="ContentDescription" />
+
+        <ImageView
+            android:id="@+id/iv_nav_feelings"
+            android:layout_width="0dp"
+            android:layout_height="45dp"
+            android:layout_weight="1"
+            android:importantForAccessibility="no"
+            android:padding="10dp"
+            android:src="@drawable/ic_feelings"
+            app:tint="#7C9A92"
+            tools:ignore="ImageContrastCheck" />
+
+        <ImageView
+            android:id="@+id/iv_nav_profile"
+            android:layout_width="0dp"
+            android:layout_height="45dp"
+            android:layout_weight="1"
+            android:padding="10dp"
+            android:src="@drawable/ic_profile_active"
+            app:tint="#7C9A92"
+            tools:ignore="ContentDescription,ImageContrastCheck" />
+    </LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

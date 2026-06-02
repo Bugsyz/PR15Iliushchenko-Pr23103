@@ -1,0 +1,153 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#2C3E3A">
+
+    <ImageView
+        android:id="@+id/iv_leaves"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:src="@drawable/leaves_decoration"
+        android:scaleType="centerCrop"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        tools:ignore="ContentDescription" />
+
+    <ImageView
+        android:id="@+id/iv_logo_top"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_marginTop="60dp"
+        android:src="@drawable/logo"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:ignore="ContentDescription" />
+
+    <TextView
+        android:id="@+id/tv_register_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:fontFamily="@font/alegreya"
+        android:text="Register"
+        android:textColor="#FFFFFF"
+        android:textSize="34sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/iv_logo_top"
+        tools:ignore="HardcodedText" />
+
+    <EditText
+        android:id="@+id/et_reg_email"
+        android:layout_width="0dp"
+        android:layout_height="55dp"
+        android:layout_marginHorizontal="25dp"
+        android:layout_marginTop="60dp"
+        android:background="@null"
+        android:hint="Email"
+        android:inputType="textEmailAddress"
+        android:textColorHint="#BEC2C2"
+        android:textColor="#FFFFFF"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tv_register_title"
+        tools:ignore="Autofill,HardcodedText" />
+
+    <View
+        android:layout_width="0dp"
+        android:layout_height="1dp"
+        android:background="#7C9A92"
+        app:layout_constraintEnd_toEndOf="@id/et_reg_email"
+        app:layout_constraintStart_toStartOf="@id/et_reg_email"
+        app:layout_constraintTop_toBottomOf="@id/et_reg_email" />
+
+    <EditText
+        android:id="@+id/et_reg_password"
+        android:layout_width="0dp"
+        android:layout_height="55dp"
+        android:layout_marginHorizontal="25dp"
+        android:layout_marginTop="20dp"
+        android:background="@null"
+        android:hint="Пароль"
+        android:inputType="textPassword"
+        android:textColorHint="#BEC2C2"
+        android:textColor="#FFFFFF"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/et_reg_email"
+        tools:ignore="Autofill,HardcodedText" />
+
+    <View
+        android:layout_width="0dp"
+        android:layout_height="1dp"
+        android:background="#7C9A92"
+        app:layout_constraintEnd_toEndOf="@id/et_reg_password"
+        app:layout_constraintStart_toStartOf="@id/et_reg_password"
+        app:layout_constraintTop_toBottomOf="@id/et_reg_password" />
+
+    <EditText
+        android:id="@+id/et_reg_confirm_password"
+        android:layout_width="0dp"
+        android:layout_height="55dp"
+        android:layout_marginHorizontal="25dp"
+        android:layout_marginTop="20dp"
+        android:background="@null"
+        android:hint="Подтвердите пароль"
+        android:inputType="textPassword"
+        android:textColorHint="#BEC2C2"
+        android:textColor="#FFFFFF"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/et_reg_password"
+        tools:ignore="Autofill,HardcodedText" />
+
+    <View
+        android:layout_width="0dp"
+        android:layout_height="1dp"
+        android:background="#7C9A92"
+        app:layout_constraintEnd_toEndOf="@id/et_reg_confirm_password"
+        app:layout_constraintStart_toStartOf="@id/et_reg_confirm_password"
+        app:layout_constraintTop_toBottomOf="@id/et_reg_confirm_password" />
+
+    <Button
+        android:id="@+id/btn_do_register"
+        android:layout_width="0dp"
+        android:layout_height="60dp"
+        android:layout_marginHorizontal="25dp"
+        android:layout_marginTop="50dp"
+        android:backgroundTint="#8FA89F"
+        android:fontFamily="@font/alegreya"
+        android:text="Register"
+        android:textAllCaps="false"
+        android:textColor="#FFFFFF"
+        android:textSize="20sp"
+        app:cornerRadius="10dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/et_reg_confirm_password"
+        tools:ignore="HardcodedText" />
+
+    <TextView
+        android:id="@+id/tv_login_link"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:layout_marginBottom="40dp"
+        android:fontFamily="@font/alegreya"
+        android:text="Уже есть аккаунт? Войти"
+        android:textColor="#FFFFFF"
+        android:textSize="18sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/btn_do_register"
+        app:layout_constraintBottom_toTopOf="@id/iv_leaves"
+        tools:ignore="HardcodedText" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

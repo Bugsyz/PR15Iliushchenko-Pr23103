@@ -1,0 +1,143 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#2C3E3A">
+
+    <!-- Верхняя панель -->
+    <ImageView
+        android:id="@+id/iv_menu"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:layout_marginStart="25dp"
+        android:layout_marginTop="60dp"
+        android:src="@drawable/ic_menu"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:tint="#FFFFFF" />
+
+    <ImageView
+        android:id="@+id/iv_logo_top"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:src="@drawable/logo"
+        app:layout_constraintEnd_toStartOf="@id/tv_logout"
+        app:layout_constraintStart_toEndOf="@id/iv_menu"
+        app:layout_constraintTop_toTopOf="@id/iv_menu"
+        app:layout_constraintBottom_toBottomOf="@id/iv_menu"
+        app:tint="#FFFFFF" />
+
+    <!-- КНОПКА ВЫХОД (Этого элемента не хватало!) -->
+    <TextView
+        android:id="@+id/tv_logout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="60dp"
+        android:layout_marginEnd="25dp"
+        android:fontFamily="@font/alegreya"
+        android:text="exit"
+        android:textColor="#FFFFFF"
+        android:textSize="16sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <!-- Аватар и имя -->
+    <ImageView
+        android:id="@+id/iv_profile_avatar"
+        android:layout_width="120dp"
+        android:layout_height="120dp"
+        android:layout_marginTop="30dp"
+        android:scaleType="centerCrop"
+        android:src="@drawable/default_avatar"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/iv_menu" />
+
+    <TextView
+        android:id="@+id/tv_profile_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="15dp"
+        android:fontFamily="@font/alegreya"
+        android:text="Эмиль"
+        android:textColor="#FFFFFF"
+        android:textSize="28sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/iv_profile_avatar" />
+
+    <!-- Галерея -->
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rv_photo_gallery"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginTop="30dp"
+        android:layout_marginBottom="20dp"
+        android:clipToPadding="false"
+        android:paddingHorizontal="25dp"
+        app:layoutManager="androidx.recyclerview.widget.GridLayoutManager"
+        app:spanCount="2"
+        app:layout_constraintBottom_toTopOf="@id/btn_add_photo"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tv_profile_name" />
+
+    <!-- Кнопка добавить -->
+    <Button
+        android:id="@+id/btn_add_photo"
+        android:layout_width="80dp"
+        android:layout_height="80dp"
+        android:layout_marginBottom="20dp"
+        android:backgroundTint="#8FA89F"
+        android:fontFamily="@font/alegreya"
+        android:text="+"
+        android:textAllCaps="false"
+        android:textColor="#FFFFFF"
+        android:textSize="40sp"
+        app:cornerRadius="15dp"
+        app:layout_constraintBottom_toTopOf="@id/bottom_navigation"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <!-- Нижний таббар -->
+    <LinearLayout
+        android:id="@+id/bottom_navigation"
+        android:layout_width="match_parent"
+        android:layout_height="70dp"
+        android:background="#2C3E3A"
+        android:orientation="horizontal"
+        android:gravity="center"
+        app:layout_constraintBottom_toBottomOf="parent">
+
+        <ImageView
+            android:id="@+id/iv_nav_home"
+            android:layout_width="0dp"
+            android:layout_height="45dp"
+            android:layout_weight="1"
+            android:src="@drawable/ic_home_active"
+            android:padding="10dp"
+            app:tint="#7C9A92"/>
+
+        <ImageView
+            android:id="@+id/iv_nav_feelings"
+            android:layout_width="0dp"
+            android:layout_height="45dp"
+            android:layout_weight="1"
+            android:src="@drawable/ic_feelings"
+            android:padding="10dp"
+            app:tint="#7C9A92"/>
+
+        <ImageView
+            android:id="@+id/iv_nav_profile"
+            android:layout_width="0dp"
+            android:layout_height="45dp"
+            android:layout_weight="1"
+            android:src="@drawable/ic_profile_active"
+            android:padding="10dp"
+            app:tint="#FFFFFF"/>
+    </LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
